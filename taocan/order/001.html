@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联通广东省内专属卡丨29元包255G通用+40G定向+100分钟通话</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta property="og:image" content="upload/p01.jpg">
+  <meta property="og:image:width" content="300px">
+  <meta property="og:image:height" content="300px">
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/ydui.css">
+  <script src="static/js/yduia.js"></script>
+  <link rel="icon" type="image/x-icon" href="/static/img/faviconlt.ico">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="stylesheet" href="static/css/newka.css">
+
+  <style>
+    .hpt {
+      display: none;
+    }
+
+    .teamcona {
+      position: relative;
+      padding-left: 70px;
+      margin-bottom: 10px;
+      background-color: #f0f7fa;
+      border-radius: 10px;
+    }
+
+
+
+    .teamconr {
+      border: none;
+      border-radius: 3px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 3%;
+    }
+
+    .teamconl {
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 42px;
+      font-size: 14px;
+      padding-left: 10px;
+      color: #333;
+    }
+
+    /* 弹窗样式 */
+    .modal {
+      display: block;
+      /* 默认隐藏 */
+      position: fixed;
+      /* 固定定位 */
+      z-index: 1;
+      /* 设置层级 */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      /* 允许滚动 */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* 半透明黑色背景 */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .modal p {
+      margin-bottom: 0px;
+    }
+
+    .card {
+      width: 300px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 30px;
+      gap: 13px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
+      border-radius: 20px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #cookieSvg {
+      width: 50px;
+    }
+
+    #cookieSvg g path {
+      fill: rgb(97, 81, 81);
+    }
+
+    .cookieHeading {
+      font-size: 1.2em;
+      font-weight: 800;
+      color: rgb(26, 26, 26);
+    }
+
+    .cookieDescription {
+      text-align: center;
+      font-size: 0.7em;
+      font-weight: 600;
+      color: rgb(99, 99, 99);
+    }
+
+    .buttonContainer {
+      display: flex;
+      gap: 20px;
+      flex-direction: row;
+    }
+
+    .acceptButton {
+      width: 80px;
+      height: 30px;
+      background-color: #7b57ff;
+      transition-duration: .2s;
+      border: none;
+      color: rgb(241, 241, 241);
+      cursor: pointer;
+      font-weight: 600;
+      border-radius: 20px;
+    }
+
+    .declineButton {
+      width: 80px;
+      height: 30px;
+      background-color: rgb(218, 218, 218);
+      transition-duration: .2s;
+      color: rgb(46, 46, 46);
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      border-radius: 20px;
+    }
+
+    .declineButton:hover {
+      background-color: #ebebeb;
+      transition-duration: .2s;
+    }
+
+    .acceptButton:hover {
+      background-color: #9173ff;
+      transition-duration: .2s;
+    }
+
+    .riskbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .riskbtn:hover {
+      background-color: #45a049;
+    }
+
+    .tabtd {
+      text-align: center;
+      width: 100%;
+      padding: 10px 10px;
+      box-sizing: border-box;
+      line-height: 24px;
+      position: relative;
+      background-color: #fff;
+      color: #000;
+    }
+
+    .tabtd span {
+      font-weight: bold;
+    }
+
+    #popupDiv {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 600px;
+    }
+
+
+    #popupDiv img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    #imgmodel {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+
+    }
+
+    .codeclass {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .codeson {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background-color: #3567d8;
+      border: none;
+      font-size: 12px;
+      padding: 5px;
+      color: white;
+      border-radius: 5px;
+    }
+
+    input[type='file'] {
+      display: none;
+    }
+
+    .upload-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .upload-image {
+      width: 100%;
+      height: 120px;
+      border: 2px dashed #ccc;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .upload-image img {
+      max-width: 80%;
+      max-height: 60%;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+
+    .upload-image p {
+      margin: 0px;
+      padding-top: 10px;
+      display: block;
+    }
+  </style>
+</head>
+
+
+
+<body style="background: rgb(245, 245, 245); max-width: 750px; margin: 0px auto;">
+  <div id="imgmodel" style="display: none;z-index: 9999;">
+    <div id="popupDiv">
+      <!-- 弹出内容 -->
+      
+    </div>
+  </div>
+  <div class="detail" style="background: #4169E1;">
+    <!-- 主图 -->
+    <div style="padding: 10px 10px 0px 10px;">
+      <img src="upload/p01.jpg" style="border-radius: 10px;width: 100%;">
+    </div>
+    <!-- 中间部分 -->
+    <div style="padding-top: 10px;">
+      <div class="navh" style="text-align: left;">
+        <div class="sys-flex-box1" style="background: linear-gradient(to right,#4169E1, rgba(0, 0, 255, 0));border-radius: 18px 0 0 0;">
+          <ul class="font_inner" style="height: 306px; top: -170px;">
+            <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -170px -22px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户166****7261在80秒前已成功领取~</a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -96px -22px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户132****5197在39秒前已成功领取~</a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -22px -22px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户173****1214在39秒前已成功领取~</a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -22px -96px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户159****2098在47秒前已成功领取~</a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -96px -96px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户189****1239在32秒前已成功领取~</a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -170px -96px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户132****4829在86秒前已成功领取~</a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -22px -170px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户158****2973在89秒前已成功领取~</a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -96px -170px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户185****7204在91秒前已成功领取~</a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -170px -170px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户156****5746在34秒前已成功领取~</a>
+                </span>
+              </div>
+            </li>
+          <li>
+              <div class="iplun">
+                <span style="width: 30px;height: 30px;display: inline-block;background-repeat: no-repeat;background: url(static/img/tx.png)  -170px -22px;"></span>
+                <span>
+                  <a href="javascipt:void(0)" class="alun">用户166****7261在80秒前已成功领取~</a>
+                </span>
+              </div>
+            </li></ul>
+        </div>
+        <div style="padding: 10px;">
+          <!-- 选号 -->
+                    <div class="cona">
+            <a href="../../kefu.html" target="_blank">
+            <div style="margin: 6px;">
+              <div class="lingqu" id="savebtn" style="background-color: #4169E1;">马上领取</div>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+              <div class="navp">
+          <div class="liantong" style=" border: 1px solid #eee;background: #4169E1;">
+            <h3 style="padding-top: 8px;font-weight: 500px;font-family: Arial, sans-serif;letter-spacing: 2px;">热门评论</h3>
+          </div>
+          <!-- 评论内容 -->
+          <div class="plcontent">
+            <div class="marquee-container">
+              <div class="direction_top">
+                <table>
+                  <tr>
+                    <td>
+                      <div style="height: 50px;">
+                        <div class="bix" style="display: flex; align-items: flex-start;">
+                          <div class="image" style="margin-right: 15px; min-width: 30px; height: 35px; display: inline-block; background: url(static/img/touxiang.png) -720px -17px;"></div>
+                          <div>
+                            <div>周**语</div>
+                            <div style="color: rgb(153, 153, 153);">
+                              很好，到达时间快，业务员上门服务，便宜优惠                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="height: 50px;">
+                        <div class="bix" style="display: flex; align-items: flex-start;">
+                          <div class="image" style="margin-right: 15px; min-width: 30px; height: 35px; display: inline-block; background: url(static/img/touxiang.png) -220px -17px;"></div>
+                          <div>
+                            <div>范**萌</div>
+                            <div style="color: rgb(153, 153, 153);">
+                              使用很稳定的，不会掉线。                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                  <tr>
+                    <td>
+                      <div style="height: 50px;">
+                        <div class="bix" style="display: flex; align-items: flex-start;">
+                          <div class="image" style="margin-right: 15px; min-width: 30px; height: 35px; display: inline-block; background: url(static/img/touxiang.png) -470px -17px;"></div>
+                          <div>
+                            <div>皮**庆</div>
+                            <div style="color: rgb(153, 153, 153);">
+                              支持4G/5G网络，畅享高速上网。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="height: 50px;">
+                        <div class="bix" style="display: flex; align-items: flex-start;">
+                          <div class="image" style="margin-right: 15px; min-width: 30px; height: 35px; display: inline-block; background: url(static/img/touxiang.png) -20px -17px;"></div>
+                          <div>
+                            <div>袁**溶</div>
+                            <div style="color: rgb(153, 153, 153);">
+                              手机流量卡办理简单，操作便捷。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="height: 50px;">
+                        <div class="bix" style="display: flex; align-items: flex-start;">
+                          <div class="image" style="margin-right: 15px; min-width: 30px; height: 35px; display: inline-block; background: url(static/img/touxiang.png) -320px -17px;"></div>
+                          <div>
+                            <div>韩**莎</div>
+                            <div style="color: rgb(153, 153, 153);">
+                              兼容性强，适用于各种设备。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="height: 50px;">
+                        <div class="bix" style="display: flex; align-items: flex-start;">
+                          <div class="image" style="margin-right: 15px; min-width: 30px; height: 35px; display: inline-block; background: url(static/img/touxiang.png) -570px -17px;"></div>
+                          <div>
+                            <div>奚**宜豪</div>
+                            <div style="color: rgb(153, 153, 153);">
+                              信号覆盖全国，无死角。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="height: 50px;">
+                        <div class="bix" style="display: flex; align-items: flex-start;">
+                          <div class="image" style="margin-right: 15px; min-width: 30px; height: 35px; display: inline-block; background: url(static/img/touxiang.png) -70px -17px;"></div>
+                          <div>
+                            <div>伍**禹</div>
+                            <div style="color: rgb(153, 153, 153);">
+                              有效期长，不用频繁充值更换手机卡。                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="height: 50px;">
+                        <div class="bix" style="display: flex; align-items: flex-start;">
+                          <div class="image" style="margin-right: 15px; min-width: 30px; height: 35px; display: inline-block; background: url(static/img/touxiang.png) -670px -17px;"></div>
+                          <div>
+                            <div>褚**贺</div>
+                            <div style="color: rgb(153, 153, 153);">
+                              兼容性好，适用于各种手机。                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        <!-- 资费 -->
+    <div style="margin: 10px;padding-top: 10px;">
+      <div class="zfcontainer">
+        <p><img src="upload/p02.jpg" contenteditable="false" style="color: var(--w-e-textarea-color); font-size: 14px;"/></p>        <div class="navx" style="margin-top: 10px;">
+          <span style="color: red;font-weight: bold;">温馨提醒：</span> 根据《刑法》第225条规定，个人擅自买卖实名电话卡属违法犯罪行为，请勿将你办理的手机卡转借、转租、买卖给他人，如被他人利用发生涉恐、诈骗、骚扰等非法违规行为，您将承担相应法律责任！
+        </div>
+        <div style="height: 88px;"></div>
+      </div>
+    </div>
+  </div>
+    <!-- 底部悬浮按钮 -->
+  <div id="hiddenElement" style="display: none;">
+    <a href="../../kefu.html" target="_blank">
+      <div id="buttonId" class="chColor" style="display: inline-flex;"></div>
+    </a>
+  </div>
+  <input type="hidden" id="sku" value="联通广东省内专属卡">
+  <input type="hidden" name="ProductID" id="pid" value="1283">
+  <input type="hidden" name="order_agent" id="uid" value="10002">
+  <div class="zhezhao_boxc">
+    <div class="opentcc">
+      <p id="tips_content" style="line-height:35px"></p>
+    </div>
+  </div>
+  <!-- 加载 -->
+  <div class="zhezhao_boxa">
+    <div class="opentca"><img style="width: 50px;height: 50px;" src="static/img/loading2.gif"></div>
+  </div>
+  <!-- 提交后弹框 -->
+  <div class="zhezhao_boxd">
+    <div class="opentcd1">
+      <p class="opentcd_p1"></p>
+      <div style="height:10px;"></div>
+      <div class="opentcd_divcc opentcd_divcc3" onclick="javascript:location.reload(true);">我知道了</div>
+      <div class="opentcd_divcc opentcd_divcc2" style="display:none" onclick="close_xuanfu()">我知道了</div>
+    </div>
+  </div>
+
+</body>
+
+<script src="static/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/ydui.citys.js"></script>
+<script type="text/javascript" src="static/js/ydui.js"></script>
+<script type="text/javascript" src="static/js/jQuery.marquee.js"></script>
+<script type="text/javascript" src="static/js/crypto-js.min.js"></script>
+<script type="text/javascript" src="static/js/chosehao.js"></script>
+<script src="../static/js/clipboard.min.js"></script>
+<script type="text/javascript">
+  function closeModalp() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  var min_age = 0;
+  var max_age = 100;
+  var haoapi = '172';
+  $(document).ready(function() {
+    $("#show-popupa").click(function() {
+      $("#overlayxy").show();
+    });
+    $("#hide-popupa").click(function() {
+      $("#overlayxy").hide();
+    });
+  });
+
+  $(window).scroll(function() {
+    var hiddenElement = $('#hiddenElement');
+    if ($(window).scrollTop() > 200) {
+      hiddenElement.show();
+    } else {
+      hiddenElement.hide();
+    }
+  });
+  $(function() {
+    var width = $('.direction_top').width();
+    $('.direction_top').find('.van-swipe-item').css({
+      'max-width': width,
+      'min-width': width,
+    });
+    $('.direction_top').marquee({
+      direction: 'top',
+      'speed': 50
+    });
+  });
+
+  $(document).ready(function() {
+    $('#mobile').on('click', function() {
+      if ($('#name').val() !== '') {
+        $('.hpt').show();
+      } else {
+        $('.hpt').hide();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $('#name').on('input', function() {
+      if ($('#mobile').val() !== '') {
+        $('.hpt').show();
+      } else {
+        $('.hpt').hide();
+      }
+    });
+  });
+
+  $(document).ready(function() {
+    $('input').focus(function() {
+      $(this).parent('div').css('border-color', 'blue');
+    });
+    $('input').blur(function() {
+      $(this).parent('div').css('border-color', '#eee');
+    });
+  });
+
+  ! function() {
+    var $target = $('#provice');
+
+    $target.citySelect();
+
+    $target.on('click', function(event) {
+      event.stopPropagation();
+      $target.citySelect('open');
+      var provincesString = "";
+      if (provincesString !== '') {
+        var aTags = document.querySelectorAll('.cityselect-item-box a');
+        var provinces = provincesString.split(",");
+        for (var i = 0; i < aTags.length; i++) {
+          var value = aTags[i].textContent;
+          if (!provinces.includes(value)) {
+            aTags[i].style.display = 'none';
+          }
+        }
+      }
+    });
+
+    $target.on('done.ydui.cityselect', function(ret) {
+      $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+
+      setTimeout(function() {
+        $('#openPopup').trigger('click');
+      }, 100);
+    });
+  }();
+
+
+  function close_xuanfu() {
+    $('.zhezhao_boxd').hide();
+  }
+
+  
+
+
+  var $ = jQuery;
+  $(document).ready(function() {
+    var c = new ClipboardJS('.copybtn');
+    c.on('success', function(e) {
+      e.clearSelection();
+    });
+    $('.hzt-side-weixin').click(function() {
+      show_pop();
+    });
+    $('.hzt-pop-box .hzt-close').click(function() {
+      close_pop();
+    });
+  })
+
+  function show_pop() {
+    $('#hzt-pop').show();
+    $('body').css('overflow', 'hidden')
+  }
+
+  function close_pop() {
+    $('#hzt-pop').hide();
+    $('body').css('overflow', 'auto')
+  }
+
+  var $ = jQuery;
+  $(document).ready(function() {
+    var c = new ClipboardJS('.copybtnqun');
+    c.on('success', function(e) {
+      e.clearSelection();
+    });
+    $('.hzt-side-weixinqun').click(function() {
+      show_qun();
+    });
+    $('.hzt-pop-box  .qun-close').click(function() {
+      close_qun();
+    });
+  })
+  $(function() {
+    //1文字轮播(2-5页中间)开始
+    $(".font_inner li:eq(0)").clone(true).appendTo($(".font_inner")); //克隆第一个放到最后(实现无缝滚动)
+    var liHeight = $(".sys-flex-box1").height(); //一个li的高度
+    //获取li的总高度再减去一个li的高度(再减一个Li是因为克隆了多出了一个Li的高度)
+    var totalHeight = ($(".font_inner li").length * $(".font_inner li").eq(0).height()) - liHeight;
+    $(".font_inner").height(totalHeight); //给ul赋值高度
+    var index = 0;
+    var autoTimer = 0; //全局变量目的实现左右点击同步
+    var clickEndFlag = true; //设置每张走完才能再点击
+
+    function tab() {
+      $(".font_inner").stop().animate({
+        top: -index * liHeight
+      }, 400, function() {
+        clickEndFlag = true;
+        if (index == $(".font_inner li").length - 1) {
+          $(".font_inner").css({
+            top: 0
+          });
+          index = 0;
+        }
+      })
+    }
+
+    function next() {
+      index++;
+      if (index > $(".font_inner li").length - 1) { //判断index为最后一个Li时index为0
+        index = 0;
+      }
+      tab();
+    }
+    autoTimer = setInterval(next, 5000);
+    $(".font_inner a").hover(function() {
+      clearInterval(autoTimer);
+    }, function() {
+      autoTimer = setInterval(next, 5000);
+    })
+  })
+  window.onload = function() {
+    // 找到弹出div元素
+    var popupDiv = document.getElementById("imgmodel");
+    // 找到弹出图片元素
+    var popupImg = document.getElementById("popupImg");
+    // 点击图片时隐藏弹出div
+    popupImg.onclick = function() {
+      popupDiv.style.display = "none";
+    };
+    // 显示弹出div
+    popupDiv.style.display = "block";
+  };
+
+</script>
+
+
+<!--
+<script type="text/javascript">
+//<!禁止网页调试代码
+if (window.jQuery) {  (function ($) {  "use strict";
+$.hmwp_is_devtool = function () { const widthth= window.outerWidth - window.innerWidth > 160; const heightth = window.outerHeight - window.innerHeight > 160;  if(navigator.userAgent.match(/iPhone/i)) return false;  if ( !(heightth && widthth) && ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthth || heightth) ) { $(document).trigger('hmwp_is_devtool'); return true; } return false; };
+var $hmtpcheck = setInterval(function(){$.hmwp_is_devtool();},500);
+$.disable_open_404 = function () {  $(document).find('html').remove(); };
+$.disable_show_error = function (message) { var $div = $('#disable_msg'); if (!$div.is(':visible')) { $div.html(message); $div.fadeIn('10'); setTimeout(function () {  $div.fadeOut('10');  }, 1000);  } };
+$.disable_event_listener = function (element, eventNames, message) { var events = eventNames.split(' '); for (var i = 0, iLen = events.length; i < iLen; i++) { element.addEventListener(events[i], function (e) {  e.preventDefault();  if (message !== '') $.disable_show_error(message); }); } };
+$.disable_return_false = function () {  return false;  };
+if($.hmwpisdevtool){ clearInterval($hmtpcheck); $.disable_open_404(); } $(document).on("hmwp_is_devtool", function (event) {  clearInterval($hmtpcheck); $.disable_open_404(); }); $(document).on("contextmenu", function (event) {  event = (event || window.event);  if (event.keyCode === 123) {    $.disable_show_error('Inspect Element is disabled!');    return false;  }});$(document).on("keydown", function (event) { event = (event || window.event);  if (event.keyCode === 123 ||  event.ctrlKey && event.shiftKey && event.keyCode === 67 ||  event.ctrlKey && event.shiftKey && event.keyCode === 73 ||  event.ctrlKey && event.shiftKey && event.keyCode === 75 ||  event.ctrlKey && event.shiftKey && event.keyCode === 74 || (event.keyCode === 83 && (navigator.platform.toUpperCase().indexOf('MAC') ? event.metaKey : event.ctrlKey))) {  $.disable_show_error('Inspect Element is disabled!');    return false;  }  if (event.ctrlKey && event.keyCode === 85) {   $.disable_show_error('View Source is disabled!');   return false;  }  });$(document).on("contextmenu", function (event) { return false; }); $.disable_event_listener(document, 'contextmenu', 'Right click is disabled!');$('img').attr('draggable', false); document.ondragstart = $.disable_return_false();  $.disable_event_listener(document, 'drag drop', 'Drag-n-Drop is disabled!'); })(window.jQuery); }
+//]]>
+</script>
+        <style>#disable_msg{display:none;min-width:250px;margin-left:-125px;background-color:#333;color:#fff;text-align:center;border-radius:2px;padding:16px;position:fixed;z-index:999;left:50%;bottom:30px;font-size:17px}}</style>
+<div id="disable_msg"></div>
+
+-->
+
+</html>

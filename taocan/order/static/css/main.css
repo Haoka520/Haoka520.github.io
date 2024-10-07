@@ -1,0 +1,1005 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+form,
+fieldset,
+input,
+textarea,
+p,
+th,
+td,
+button,
+span,
+menu,
+section,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+a,
+img,
+button,
+input,
+textarea,
+div,
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img,
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  max-width: 100% !important;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+dfn {
+  color: #f0831e;
+  font-style: normal;
+  font-size: 14px;
+  font-family: '微软雅黑';
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: '微软雅黑';
+  font-size: 14px;
+  /* background-color: rgba(0, 0, 0, 0); */
+}
+
+select {
+  /* appearance:none;
+ -moz-appearance:none;
+ -webkit-appearance:none; */
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 15px;
+}
+
+body {
+  --theme-color: #16b597;
+}
+
+input {
+  background: none;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.nav {
+  padding: 0 3% 15px;
+  border-bottom: 1px solid #f5f5f5;
+  margin-top: 0;
+}
+
+.navi {
+  padding: 0 10px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.nava {
+  font-size: 16px;
+  color: #4262f4;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+
+.nava:before {
+  content: '';
+  width: 4px;
+  height: 17px;
+  background-repeat: no-repeat;
+  float: left;
+  background: #4262f4;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.navc:before {
+  content: '';
+  width: 4px;
+  height: 14px;
+  background-repeat: no-repeat;
+  float: left;
+  background: #4262f4;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+/* 团队 */
+
+.teamconr1 {
+  border: none;
+  height: 40px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.teamconr2 {
+  border: none;
+  height: 40px;
+  font-size: 15px;
+  width: 50%;
+  float: left;
+}
+
+.teamconr3 {
+  float: right;
+  text-align: right;
+  font-size: 13px;
+  color: #666;
+  padding-right: 10px;
+}
+
+.teamconr4 {
+  border: none;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 80px;
+  padding: 10px 0;
+  line-height: 24px;
+  font-size: 15px;
+}
+
+.team_btn {
+  width: 95%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 30px;
+  text-align: center;
+  color: #db1100;
+  font-size: 16px;
+  background: #fff000;
+  margin: 0 auto;
+}
+
+.teamcon_tit {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  line-height: 18px;
+  padding-left: 4px;
+  border-left: 3px solid #4362f3;
+  margin: 10px 0;
+}
+
+.teamlogin {
+  width: 90%;
+  margin: 5px auto;
+  padding: 15px 3%;
+  border-radius: 5px;
+}
+
+.teamlogina {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.teamloginl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 42px;
+  font-size: 14px;
+  color: #333;
+}
+
+.teamloginr {
+  border-radius: 3px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 3%;
+  background: #fff;
+}
+
+.teamloginr1 {
+  border: none;
+  height: 40px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.teamloginr2 {
+  border: none;
+  height: 40px;
+  font-size: 14px;
+}
+
+html {
+  height: auto;
+}
+
+.input {
+  width: 100%;
+}
+
+.dingdan {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  z-index: 1000;
+  width: 25px;
+}
+
+.gengduo {
+  position: fixed;
+  top: 25%;
+  right: 0;
+  z-index: 1000;
+  width: 25px;
+}
+
+.zhezhao_boxa {
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.zhezhao_boxc {
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.zhezhao_boxd {
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.opentca img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0.6;
+  border-radius: 10px;
+  position: fixed;
+  left: 23%;
+  top: 50%;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.opentcc {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  position: fixed;
+  min-width: 150px;
+  max-width: 180px;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.opentcd1 {
+  padding: 20px 0;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  position: fixed;
+  min-width: 200px;
+  max-width: 230px;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.opentcd_p1 {
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto 20px;
+  color: #333;
+  line-height: 16px;
+}
+
+.opentcd_divcc {
+  font-size: 14px;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  background: #4262f4;
+  color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tips-desc {
+  color: #333;
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+/* 办理按钮 */
+.fixed-bottom {
+  text-align: center;
+  padding: 20px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+}
+
+.lingqu {
+  max-width: 710px;
+  min-width: 250px;
+  height: 40px;
+  border-radius: 40px;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  overflow: hidden;
+  background: #4262f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 办理表单 */
+.teamcon {
+  width: 94%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.teamcona {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 10px;
+}
+
+.teamconl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 42px;
+  font-size: 14px;
+  color: #333;
+}
+
+.teamconr {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 3%;
+}
+
+.teamloginr1 {
+  border: none;
+  height: 40px;
+  font-size: 14px;
+}
+
+/* 办理流程 */
+.apply_da {
+  width: 17.5%;
+  float: left;
+  text-align: center;
+  margin-right: 3%;
+}
+
+.apply_dc {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  line-height: 18px;
+  margin-top: 0px;
+}
+
+.apply_da img {
+  width: 25px;
+}
+
+.navlogo {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.navimg {
+  border-bottom: 1px solid #f5f5f5;
+  margin-bottom: 80px;
+}
+
+/* 标题 */
+.listc3 {
+  line-height: normal;
+  text-align: center;
+}
+
+.listc3 timea {
+  border: 1px #4262f4 solid;
+  color: #4262f4;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.listc3 empty {
+  border: 1px #18a52a solid;
+  color: #18a52a;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.listc3 lable {
+  border: 1px #2997f7 solid;
+  color: #2997f7;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.listc3 contenta {
+  border: 1px #f14e4e solid;
+  color: #f14e4e;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.listc3 contentb {
+  border: 1px #946ddd solid;
+  color: #946ddd;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.title {
+  padding: 10px;
+}
+
+.detail {
+  margin: 10px;
+  padding: 0;
+  border-bottom: none;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 10px rgb(116 116 116 / 8%);
+}
+
+.detaila {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+/* 表格 */
+table {
+  border-collapse: inherit;
+  width: 100%;
+}
+
+th,
+td {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #666;
+  font-size: 12px;
+  text-align: center;
+}
+
+table {
+  border-spacing: 0;
+}
+
+table th {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+
+table td {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid gray;
+}
+
+table tr:first-child td:first-child {
+  border-top-left-radius: 5px;
+}
+
+table tr:first-child td:last-child {
+  border-top-right-radius: 5px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+table tr:last-child td {
+  border-top: none;
+}
+
+table tr td:nth-child(2) {
+  border-left: none;
+}
+
+.sec {
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.poster {
+  width: 100%;
+  padding-top: 0;
+  margin-bottom: 15px;
+}
+
+.poster-list .poster-txt.xg:after {
+  height: 1rem;
+}
+
+.nava:before {
+  background: #4262f4;
+}
+
+.nav {
+  padding: 0 10px;
+  border: none;
+}
+
+.navb {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.navt {
+  width: 100%;
+  padding: 10px 0px;
+  box-sizing: border-box;
+  line-height: 24px;
+  position: relative;
+  background-color: #fff;
+  color: rgb(117, 117, 126);
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.navx {
+  text-align: center;
+  width: 100%;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  line-height: 24px;
+  position: relative;
+  background-color: #fff;
+  color: rgb(179, 179, 181);
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.nvat_t {
+  color: #333;
+  font-weight: 700;
+}
+
+.navc {
+  font-size: 15px;
+  color: #4262f4;
+  line-height: normal;
+  font-weight: bold;
+  padding: 15px 0px 15px 0px;
+  left: 10px;
+  position: relative;
+}
+
+.navc:before {
+  height: 15px;
+  margin-top: 0;
+  position: absolute;
+  transform: translate(0, -7.5px);
+  top: 50%;
+  left: -10px;
+}
+
+.navd {
+  background: #fff;
+  padding: 0 10px 15px;
+  border-radius: 10px;
+  margin: 15px 10px 15px;
+  border: none;
+  box-shadow: 0 0 9px rgb(116 116 116 / 8%);
+}
+
+.nave {
+  background: #fff;
+  padding: 0 10px 5px;
+  border-radius: 10px;
+  margin: 15px 10px 0;
+  border: none;
+  box-shadow: 0 0 9px rgb(116 116 116 / 8%);
+}
+
+.cona {
+  font-size: 14px;
+  color: #666;
+}
+
+.tagcss {
+  border: 1px #4262f4 solid;
+  color: #4262f4;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.poster {
+  margin-bottom: 0.3215rem;
+}
+
+.poster-list img {
+  width: 100%;
+}
+
+.poster-list .poster-txt {
+  position: relative;
+  overflow: hidden;
+  transition: height 0.24s;
+}
+
+.poster-list .poster-txt.xg:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4rem;
+  background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+  background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+}
+
+.poster-btn {
+  outline: none;
+  display: block;
+  width: 75px;
+  line-height: 2;
+  margin: 0.1rem auto;
+  color: #fff;
+  font-size: 0.28rem;
+  text-align: center;
+  background: #4262f4;
+  border-radius: 30px;
+}
+
+.current-menu {
+  content: '';
+  display: block;
+  margin-top: 10px;
+  background: #e24f4f;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.detail {
+  margin: 10px;
+  border-bottom: none;
+  padding: 15px 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 10px rgb(116 116 116 / 8%);
+}
+
+/* 办理流程 */
+.apply_da {
+  width: 17.5%;
+  float: left;
+  text-align: center;
+  margin-right: 3%;
+}
+
+.apply_dc {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  line-height: 18px;
+  margin-top: 0px;
+}
+
+.apply_da img {
+  width: 25px;
+}
+
+.liucheng {
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(left, #54a1f7, #4262f4) no-repeat;
+  border-radius: 50px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.con {
+  font-size: 15px;
+}
+
+.cona {
+  font-size: 14px;
+  color: #666;
+}
+
+.clear {
+  display: block;
+  clear: both;
+}
+
+.chao {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  font-size: 14px;
+}
+
+.where {
+  border-radius: 3px;
+  height: 48px;
+  line-height: 50px;
+  padding: 0 20px;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 0;
+}
+
+#popupContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+#popupContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 750px;
+  width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#closePopup {
+  margin-top: 20px;
+}
+
+#phoneContainer {
+  width: 100%;
+  height: 30vh;
+  overflow-y: scroll;
+}
+
+#phoneContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+#phoneContainer::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+#phoneContainer::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+#phoneContainer .phoneRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#phoneContainer .phoneItem {
+  width: 48%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px #eeeeee solid;
+  font-size: 14px;
+  margin-right: 1%;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 0.1rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 按钮重置 */
+.reset-button {
+  /* 重置按钮的默认样式 */
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  outline: none;
+  padding: 0;
+}
+
+#hpButton {
+  /* 添加其他需要的样式 */
+  flex: 1;
+  padding: 0.2rem;
+  background: #4262f4;
+  opacity: 1;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 22px;
+  margin: 0.2rem 0.3rem;
+}
+
+#csButton {
+  /* 添加其他需要的样式 */
+  flex: 1;
+  padding: 0.2rem;
+  background: #4262f4;
+  opacity: 0.5;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 22px;
+  margin: 0.2rem 0.3rem;
+}
+
+.select-alert {
+  position: fixed;
+  ;
+  left: 30px;
+  right: 30px;
+  height: 410px;
+  top: 50%;
+  margin-top: -205px;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 999999;
+  display: none;
+}
+
+.select-alert .titles {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: linear-gradient(132deg, #ffbc37, #4262f4);
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.select-alert .titles img {
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.search-for {
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  border: 1px solid #4262f4;
+  height: 35px;
+  line-height: 24px;
+  border-radius: 5px;
+}
+
+.xhsear {
+  width: calc(100% - 80px);
+  float: left;
+  font-size: 14px;
+  height: 32px;
+  margin: 0px;
+  border: none;
+  padding-left: 14px;
+
+}
+
+.xhbtn {
+  width: 60px;
+  height: 32px;
+  line-height: 32px;
+  color: #4262f4;
+  float: right;
+  text-align: center;
+  font-size: 14px;
+}

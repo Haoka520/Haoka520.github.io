@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>号友派通信</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <link rel="stylesheet" href="static/css/vant.css">
+        <script src="static/js/vue.min.js"></script>
+        <script src="static/js/vantall.js"></script>
+        <script src="static/js/axios.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="static/css/all.css">
+		<script src="static/js/q.js"></script>
+		<script src="static/js/html2canvas.min.js"></script>
+     <style type="text/css">
+		*{ box-sizing: border-box; font-family:'PingFang SC'; font-size: 12px;}
+		img{ max-width: 100%;}
+		.kflexbc{ display: flex; justify-content: space-between; align-items: center; }
+		.kflexc{ display: flex; align-items: center; }
+		.kflexcc{ display: flex; align-items: center; justify-content: center;}
+		.kflex{ display: flex; }
+		.li{color: rgb(102, 102, 102); font-size: 16px; font-weight: bold; margin-right: 0.3rem; }
+		.liact{ font-size: 20px; color: rgb(30, 30, 30); font-weight: bold; background: url('static/img/sticker1.jpg') no-repeat center;}
+    </style><style type="text/css" id="tts-styles">[data-tts-block-id].tts-active {background: rgba(206, 225, 255, 0.9) !important;} [data-tts-sentence-id].tts-active {background: rgba(0, 89, 191, 0.7) !important;}</style><style class="redeviation-bs-style" data-name="content">/*! (c) Philipp Koenig under MS-RSL */
+body>div#redeviation-bs-indicator>div{opacity:0;pointer-events:none}body>#redeviation-bs-overlay.redeviation-bs-visible,body>#redeviation-bs-sidebar.redeviation-bs-visible{opacity:1;pointer-events:auto}body.redeviation-bs-noscroll{overflow:hidden !important}body>div#redeviation-bs-indicator>div{position:absolute;transform:translate3d(-40px, 0, 0);top:0;left:0;width:40px !important;height:100%;background:rgba(0,0,0,0.5);border-radius:0 10px 10px 0;transition:opacity .3s,transform .3s;z-index:2}body>div#redeviation-bs-indicator>div>span{-webkit-mask:no-repeat center/32px;-webkit-mask-image:url(chrome-extension://jdbnofccmhefkmjbkkdkfiicjkgofkdh/img/icon-bookmark.svg);background-color:#ffffff;position:absolute;display:block;top:0;left:0;width:100%;height:100%}body>div#redeviation-bs-indicator[data-pos=right]{left:auto;right:0}body>div#redeviation-bs-indicator[data-pos=right]>div{transform:translate3d(40px, 0, 0);left:auto;right:0;border-radius:10px 0 0 10px}body>div#redeviation-bs-indicator.redeviation-bs-fullHeight>div{border-radius:0}body>div#redeviation-bs-indicator.redeviation-bs-hover>div{transform:translate3d(0, 0, 0);opacity:1}body>div#redeviation-bs-indicator[data-pos=left].redeviation-bs-has-lsb{height:100% !important;top:0 !important}body>div#redeviation-bs-indicator[data-pos=left].redeviation-bs-has-lsb>div{background:rgba(0,0,0,0)}body>div#redeviation-bs-indicator[data-pos=left].redeviation-bs-has-lsb>div>span{-webkit-mask-position-y:20px}body>#redeviation-bs-sidebar{width:350px;max-width:none;height:0;z-index:2147483646;background-color:rgba(255, 255, 255, 0.8) !important;color-scheme:auto !important;speak:none;border:none;display:block !important;transform:translate3d(-350px, 0, 0);transition:width 0s .3s,height 0s .3s,opacity .3s,transform .3s}body>#redeviation-bs-sidebar[data-pos=right]{left:auto;right:0;transform:translate3d(350px, 0, 0)}body>#redeviation-bs-sidebar.redeviation-bs-visible{width:calc(100% + 350px);height:100%;transform:translate3d(0, 0, 0);transition:opacity .3s,transform .3s}body>#redeviation-bs-sidebar.sidepanel{width:100% !important}body>#redeviation-bs-sidebar.redeviation-bs-hideMask{background:none !important}body>#redeviation-bs-sidebar.redeviation-bs-hideMask:not(.redeviation-bs-hover){width:calc(350px + 50px)}body>#redeviation-bs-overlay{width:100%;max-width:none;height:100%;z-index:2147483647;border:none;speak:none;background:rgba(0,0,0,0.5) !important;color-scheme:auto !important;transition:opacity .3s}</style></head>
+    <style type="text/css">
+		*{ box-sizing: border-box; font-family:'PingFang SC'; font-size: 12px;}
+		img{ max-width: 100%;}
+		.kflexbc{ display: flex; justify-content: space-between; align-items: center; }
+		.kflexc{ display: flex; align-items: center; }
+		.kflexcc{ display: flex; align-items: center; justify-content: center;}
+		.kflex{ display: flex; }
+		.li{color: rgb(102, 102, 102); font-size: 16px; font-weight: bold; margin-right: 0.3rem; }
+		.liact{ font-size: 20px; color: rgb(30, 30, 30); font-weight: bold; background: url('static/img/sticker1.jpg') no-repeat center;}
+    </style>
+	<body>
+        <div id="app" style="background: rgb(255, 255, 255);"><div style="padding: 2.4rem 0.3rem 0.3rem; background: url(&quot;static/img/bgpic.jpg&quot;) 0% 0% / 100% no-repeat; min-height: 100vh;"><!----> <div style="background: rgb(255, 255, 255); width: 6.8rem; margin: 0px auto 0.3rem; border-radius: 0.4rem; padding: 0.4rem; box-sizing: border-box;"><div class="kflex"><div><img src="static/img/sticker2.jpg" style="width: 0.92rem; margin-right: 0.2rem;"></div> <div><div style="color: rgb(51, 51, 51); margin-bottom: 0.1rem; font-size: 16px; font-weight: bold;">在线客服</div> <div style="color: rgb(102, 102, 102); font-size: 14px;">工作时间：9:00-22:00</div></div></div> <div class="kflexcc" style="width: 100%;"><img src="static/img/kefuqr.jpg" style="width: 4rem; padding: 0.2rem; margin: 0.3rem 0px; box-shadow: rgba(200, 215, 234, 0.4) 0px 3px 20px 0px; border-radius: 10px;"></div> <div style="color: rgb(102, 102, 102); font-size: 12px; width: 100%; text-align: center;">添加客服微信，查询订单/咨询售后。</div> <!----></div> <div style="background: rgb(255, 255, 255); width: 6.8rem; margin: 0px auto; border-radius: 0.4rem; padding: 0.4rem; box-sizing: border-box;"><div style="margin-bottom: 0.4rem; font-size: 16px;">常见问题</div> <div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;">这些都是运营商正规卡套餐吗？</div> <div style="font-size: 12px; color: rgb(153, 153, 153);">本平台的所有产品均为四大运营商移动、联通、电信、广电的正规卡，和营业厅办理的卡没有任何区别，您可以拨打人工客服或者登录线上营业厅APP均可查询！</div></div><div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;">归属地和号码可选吗？是否为全国通用？</div> <div style="font-size: 12px; color: rgb(153, 153, 153);">因每个地市运营商政策不同，归属地是无法选择的，部分套餐是可以选号的，（联通K计划或广电套餐卡收货地为归属地，具体看详情）流量和语音都全国通用不限地区。</div></div><div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;">办理的卡不想用了如何注销？</div> <div style="font-size: 12px; color: rgb(153, 153, 153);">2019年1月1日起工信部已经支持号卡异地销户，如需要办理销户直接拨打运营商对应官方客服电话或在线上营业厅(官方APP)申请销户即可。</div></div><div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;">办理的订单为什么会审核失败？</div> <div style="font-size: 12px; color: rgb(153, 153, 153);">失败的因素有很多，如：该卡不支持收件地区、年龄不符合要求、地区涉诈重灾区，地址携带酒店、旅馆、驿站、学校、公司、附近、旁边、代收点、网吧等；可以尝试申请其他运营商套餐，或联系在线客服寻求帮助。</div></div><div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;">网上办卡是否安全？身份信息会泄露吗？</div> <div style="font-size: 12px; color: rgb(153, 153, 153);">信息是接口直接提交到运营商开卡，绝不会泄露您的身份信息，请放心下单。</div></div><div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;">如何正确签收快递？</div> <div style="font-size: 12px; color: rgb(153, 153, 153);">首先一定要在查询订单处核对快递单号，查询订单处有新生产的手机号时也要核对新手机号（没有的无视即可），快递单号或者手机号不正确不要激活，尽快联系客服。</div></div><div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;">如何激活手机号卡？</div> <div style="font-size: 12px; color: rgb(153, 153, 153);">新手机卡一般分为自己激活和快递员激活两种: 其中自己激活的，快递包裹里会有说明书，如果没有或者丢失，请联系客服索要电子版（一般激活时需要身份证正反照片，建议提前备好） 快递员激活的，一般是京东（少部分是顺丰）快递员协助你激活，需要身份证原件，建议提前备好【快递员激活的卡一定要核对单号无误再激活，不要相信换卡，套餐不变，本地套餐之类的话，都是假的，有疑问尽快联系客服】。</div></div><div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;">按商品介绍要求首充</div> <div style="font-size: 12px; color: rgb(153, 153, 153);">收到卡激活以后要尽快按要求首充，否则套餐可能会对不上 首充要求一般在下单时详情图里会标注 快递员激活的电信卡和移动卡，一般是在快递员处二维码充值即可，如果快递员忘记了，可以联系客服索要首充链接 自己激活的电信卡，一般在激活过程中会跳出充值界面，不要跳过，充值即可，遇到问题及时联系客服 联通卡一般是在快递员处或者任意官方渠道充值即可，充值数额100还是50会在详情图标注，不确定的可以联系客服。</div></div><div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;">流量到账问题？</div> <div style="font-size: 12px; color: rgb(153, 153, 153);">首月流量有全到的，也有到一部分的，具体要看产品介绍 有的流量包不是激活后马上就到的，有的半小时左右到账，有的24小时，总之72小时内都会到，首充的话费也是，刚激活需要些时间传输数据，一般两小时内到账 一般电信都是首月按照当月剩余天数到账的，比如10号激活，当月剩余20天，20÷30=⅔ ，那流量就会到账三分之二 次月流量就会恢复正常 按照全月扣费 套餐内容流量等也就全额到账了。</div></div><div style="margin-bottom: 0.15rem;"><div style="font-size: 14px; color: rgb(102, 102, 102); margin-bottom: 0.1rem;"></div> <div style="font-size: 12px; color: rgb(153, 153, 153);">强烈建议按要求首充后下载登录运营商App查看流量是否到账，确认到账以后就可以放心使用了 以免流量没到账 超额使用导致扣费！ 其他问题有遇到不明白的 都可以联系客服处理。</div></div></div></div></div>
+
+       
+        <script>
+            var h = document.documentElement.clientWidth / 7.5 + 'px';
+                document.documentElement.style.fontSize = h;
+
+            
+            new Vue({
+                el: '#app',
+                data: function() {
+                	return {
+						ruleForm:{},
+						apis:"/apis"
+                	}
+                },
+                created(){
+					if(location.host != 'localhost'){
+						this.apis = ""
+					}
+					axios.get(this.apis +'/api/plan-market/order-page/web/mini-store/info?shop_id='+this.getUrlParam('shop_id'))
+						.then(response => {
+							if (response.data.msg.code == 0) {
+								this.ruleForm = response.data.data
+								document.title = this.ruleForm.name
+							} else {
+								vant.Toast(response.data.msg.info);
+							}
+						})
+					
+                },
+                mounted () {
+					
+                },
+                methods:{
+					
+					getUrlParam:function(name) {
+					    var query = window.location.search.substring(1);
+					    var vars = query.split("&");
+					    for (var i=0;i<vars.length;i++) {
+					            var pair = vars[i].split("=");
+					            if(pair[0] == name){return pair[1];}
+					    }
+					    return(false);
+					}
+					
+                }
+            });
+
+  
+        </script>
+	
+
+<div style="background-color: rgb(255, 143, 0); display: none; color: white; text-align: center; position: fixed; top: 0px; left: 0px; width: 100%; height: auto; min-width: 100%; min-height: auto; max-width: 100%; font: 12px &quot;Helvetica Neue&quot;, Helvetica, Arial, Geneva, sans-serif; cursor: pointer; padding: 5px;"><span style="color: white; font: 12px &quot;Helvetica Neue&quot;, Helvetica, Arial, Geneva, sans-serif;">You have turned off the paragraph player. You can turn it on again from the options page.</span><img src="chrome-extension://gfjopfpjmkcfgjpogepmdjmcnihfpokn/img/icons/icon-close_16.png" style="width: 20px; height: auto; min-width: 20px; min-height: auto; max-width: 20px; float: right; margin-right: 10px;"></div><bookmark-sidebar-o8rzvfzqytg id="redeviation-bs-sidebar" class="notranslate" aria-hidden="true" data-theme="default" data-pos="right"></bookmark-sidebar-o8rzvfzqytg><div id="redeviation-bs-indicator" data-theme="default" class="redeviation-bs-fullHeight" style="height: 100%; top: 0%;"></div></body>
+</html>
